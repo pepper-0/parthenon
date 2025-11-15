@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -600.0
+const SPEED = 250.0
+const JUMP_VELOCITY = -500.0
 
 func _physics_process(delta: float) -> void:
 		if not is_on_floor():
@@ -11,6 +11,7 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 			
 		var direction := Input.get_axis("left", "right")
+		
 		if direction:
 			velocity.x = direction * SPEED
 		else:

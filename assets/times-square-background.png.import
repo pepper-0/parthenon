@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1axu5gs0o58d"
-path="res://.godot/imported/2212_blue-color.png-825727f2e9970501589ec19ce043bc4a.ctex"
+uid="uid://bvqcagqaefvjv"
+path="res://.godot/imported/times-square-background.png-5fbb1e5e8f3584d92d18097f8bdbeb5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://2212_blue-color.png"
-dest_files=["res://.godot/imported/2212_blue-color.png-825727f2e9970501589ec19ce043bc4a.ctex"]
+source_file="res://assets/times-square-background.png"
+dest_files=["res://.godot/imported/times-square-background.png-5fbb1e5e8f3584d92d18097f8bdbeb5e.ctex"]
 
 [params]
 
