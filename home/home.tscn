@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://yrfro1i85jvd"]
+
+[ext_resource type="Texture2D" uid="uid://tmhvw54bynve" path="res://assets/background-px.png" id="1_nh1o0"]
+[ext_resource type="Texture2D" uid="uid://b5ail75un2hv0" path="res://assets/brooklyn-sign-px.png" id="2_esb4i"]
+[ext_resource type="Texture2D" uid="uid://fj07qymk1k7m" path="res://assets/central-sign-px.png" id="3_khj4e"]
+[ext_resource type="Texture2D" uid="uid://djefxdpmmtexf" path="res://assets/title-px.png" id="4_xo36c"]
+[ext_resource type="Texture2D" uid="uid://wlln3itkdbp5" path="res://assets/ts-px.png" id="5_1wbue"]
+[ext_resource type="Texture2D" uid="uid://dsi12jagmkhqb" path="res://assets/statue-px.png" id="6_03e8k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stxqr"]
+texture = ExtResource("1_nh1o0")
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_stxqr")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="Node2D"]
+offset_left = 5.0
+offset_top = 195.0
+offset_right = 1005.0
+offset_bottom = 457.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_esb4i")
+
+[node name="TextureButton2" type="TextureButton" parent="Node2D"]
+offset_left = 341.0
+offset_top = 386.0
+offset_right = 1341.0
+offset_bottom = 648.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_khj4e")
+
+[node name="TextureButton3" type="TextureButton" parent="Node2D"]
+offset_left = 15.0
+offset_top = 285.0
+offset_right = 1015.0
+offset_bottom = 547.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_xo36c")
+
+[node name="TextureButton4" type="TextureButton" parent="Node2D"]
+offset_left = 722.0
+offset_top = 577.0
+offset_right = 1722.0
+offset_bottom = 839.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_1wbue")
+
+[node name="TextureButton5" type="TextureButton" parent="Node2D"]
+offset_left = 607.0
+offset_top = 114.0
+offset_right = 1607.0
+offset_bottom = 376.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_03e8k")

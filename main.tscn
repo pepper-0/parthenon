@@ -1,10 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://cuf7qs5gk7d3e"]
 
-[ext_resource type="Texture2D" uid="uid://duh3xsfor3l58" path="res://bb.jpeg" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://blo4m7dqfyxp" path="res://intro.gd" id="1_ig7tw"]
+[ext_resource type="Texture2D" uid="uid://bcnibfkt58lj5" path="res://assets/intro-1.png" id="2_0xm2m"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ig7tw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_0xm2m")
+position = Vector2(560.6548, 308)
+scale = Vector2(0.5715155, 0.5481481)
+texture = ExtResource("2_0xm2m")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
