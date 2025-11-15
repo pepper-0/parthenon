@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GC="*res://game_controller.gd"
-EC="*res://event_controller.gd"
+GC="*res://times_square/game_controller.gd"
+EC="*res://times_square/event_controller.gd"
 
 [input]
 
