@@ -7,6 +7,6 @@ func _ready() -> void:
 
 func setup_camera_limits(rect: Rect2i) ->  void: 
 	pass
-	#limit_left = rect.position.x
-	#limit_right = (rect.position.x + rect.size.x) * 12
-	#limit_bottom = (rect.position.y + rect.size.y) * 12
+	limit_left = rect.position.x
+	limit_right = (rect.position.x + rect.size.x) * 12
+	limit_bottom = (rect.position.y + rect.size.y) * 12
