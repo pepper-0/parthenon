@@ -15,6 +15,11 @@ run/main_scene="uid://rsohf3cy5hnq"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GC="*res://times_square/game_controller.gd"
+EC="*res://times_square/event_controller.gd"
+
 [input]
 
 right={
