@@ -21,8 +21,6 @@ config/icon="res://icon.svg"
 GC="*res://times_square/game_controller.gd"
 EC="*res://times_square/event_controller.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
-GC="*res://times_square/game_controller.gd"
-EC="*res://times_square/event_controller.gd"
 
 [dialogic]
 
@@ -41,14 +39,12 @@ project/assembly_name="parthenon"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+"<<<<<<<HEAD[global_group]coins"=""
 
-<<<<<<< HEAD
 [global_group]
 
 coins=""
 
-=======
->>>>>>> 93a9c90b9aa4574949032a82a94aa34b2b234423
 [input]
 
 right={
