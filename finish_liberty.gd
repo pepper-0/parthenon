@@ -1,7 +1,7 @@
 extends Node2D
 
 var images = [
-	preload("res://assets/finish-park.png")
+	preload("res://assets/finish-liberty.png")
 ]
 
 var index = 0

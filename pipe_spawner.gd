@@ -40,11 +40,9 @@ func _process(delta):
 			# Update label
 			var score_label = main_scene.get_node("ScoreLabel")
 			score_label.text = str(main_scene.score)
-
-			print("?JGKFNd")
 			# Win condition
 			if main_scene.score >= 7:
-				get_tree().change_scene_to_file("res://end/end.tscn")
+				get_tree().change_scene_to_file("res://finish-liberty.tscn")
 
 	# Recycle pipes
 	recycle_pipes()
