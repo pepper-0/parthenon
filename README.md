@@ -1,10 +1,10 @@
-# parthenon
+# Parthenon
 - play [here](https://google.com)
 
 ### *About*
-parthenon is a platformer adventure game where the player helps Athena recover her missing artifacts in a Greek-mythology inspired version of NYC!
+Parthenon is a platformer adventure game where the player helps Athena recover her missing artifacts in a Greek-mythology inspired version of NYC!
 
-you play as Orpheus, meeting Athena when she loses a few of her artifacts. To help her reclaim them, you must navigate various platforming challenges! Each artifact gained brings you closer to completing the game. 
+You play as Orpheus, meeting Athena when she loses a few of her artifacts. To help her reclaim them, you must navigate various platforming challenges! Each artifact gained brings you closer to completing the game. 
 Set in NYC, each level is based on a real landmark and has unique objectives:
 
 - Brooklyn Bridge: scale the bridge cables and avoid the bridge pillars and recover Athena's snake.
@@ -13,7 +13,7 @@ Set in NYC, each level is based on a real landmark and has unique objectives:
 - Statue of Liberty: Fly from the Statue of Liberty, avoiding obstacles to land safely to find Athena's owl.
 
 ### *How to Play*
-- To play: play on [itch.io](https://google.com)
+- To play: play on [itch.io](https://mayalh22.itch.io/parthenon-game)
 - Navigate through the introduction 
 - Play each platforming level
 - Collect the artifact for that level's objective
@@ -34,3 +34,5 @@ Other resources and tools used:
 
 ### *Notes*
 - Thank you to the Athena organizers for hosting & organizing Parthenon! Also, thank you to Tongyu especially for all her help with Godot :)
+
+<img width="2578" height="1453" alt="parthenon" src="https://github.com/user-attachments/assets/b0f5c642-57b1-4e66-9a1a-f23ee7a396f2" />
