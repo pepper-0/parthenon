@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 1000.0
-const JUMP_VELOCITY = -800.0
+const SPEED = 800.0
+const JUMP_VELOCITY = -500.0
 
 var coin_counter = 0
 

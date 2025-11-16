@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dhp0ul81dgug6" path="res://statue_of_liberty.gd" id="1_moun6"]
 [ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_de8ca"]
 [ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="3_de8ca"]
-[ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_753v3"]
+[ext_resource type="Script" uid="uid://s45v2ixjas5n" path="res://liberty_pipe_spawner.gd" id="5_753v3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
 size = Vector2(81, 88)
@@ -30,7 +30,7 @@ position = Vector2(49.5, 48)
 shape = SubResource("RectangleShape2D_8810n")
 
 [node name="PipeSpawner" type="Node2D" parent="."]
-script = ExtResource("4_753v3")
+script = ExtResource("5_753v3")
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 519.0

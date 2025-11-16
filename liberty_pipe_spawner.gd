@@ -42,7 +42,7 @@ func _process(delta):
 			score_label.text = str(main_scene.score)
 			# Win condition
 			if main_scene.score >= 7:
-				get_tree().change_scene_to_file("res://finish-brooklyn.tscn")
+				get_tree().change_scene_to_file("res://finish-liberty.tscn")
 
 	# Recycle pipes
 	recycle_pipes()

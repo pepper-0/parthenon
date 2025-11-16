@@ -143,6 +143,46 @@ texture_normal = ExtResource("6_03e8k")
 
 [node name="Node2D2" type="Node2D" parent="."]
 
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 608.9095
+offset_top = 41.035862
+offset_right = 648.9095
+offset_bottom = 127.03586
+theme_override_colors/font_color = Color(0.14117648, 0.3882353, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "1"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.801022
+offset_top = 111.655716
+offset_right = 63.80102
+offset_bottom = 197.65572
+theme_override_colors/font_color = Color(0.14117648, 0.3882353, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "2"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 518.66394
+offset_top = 444.71423
+offset_right = 558.66394
+offset_bottom = 530.71423
+theme_override_colors/font_color = Color(0.14117648, 0.3882353, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "3"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 679.3208
+offset_top = 565.91315
+offset_right = 719.3208
+offset_bottom = 651.91315
+theme_override_colors/font_color = Color(0.14117648, 0.3882353, 0, 1)
+theme_override_font_sizes/font_size = 62
+text = "4"
+
 [connection signal="pressed" from="Node2D/TextureButton" to="." method="_on_brooklyn_pressed"]
 [connection signal="pressed" from="Node2D/TextureButton2" to="." method="_on_park_pressed"]
 [connection signal="pressed" from="Node2D/TextureButton4" to="." method="_on_ts_pressed"]
