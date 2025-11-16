@@ -1,10 +1,10 @@
 extends Node
 
 var images = [
-	preload("res://nyc.webp"),
-	preload("res://bb.jpeg"),
-	preload("res://nyc.webp"),
-	preload("res://bb.jpeg")
+	preload("res://assets/intro-1.png"),
+	preload("res://assets/intro-2.png"),
+	preload("res://assets/intro-3.png"),
+	preload("res://assets/intro-4.png")
 ]
 
 var index = 0
@@ -18,4 +18,4 @@ func _input(event):
 		if index < images.size():
 			$Sprite2D.texture = images[index]
 		else:
-			get_tree().change_scene("res://LevelSelect.tscn")
+			get_tree().change_scene_to_file("res://home/home.tscn")
