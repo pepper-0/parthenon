@@ -1,0 +1,144 @@
+[gd_scene load_steps=19 format=3 uid="uid://yrfro1i85jvd"]
+
+[ext_resource type="Texture2D" uid="uid://tmhvw54bynve" path="res://assets/background-px.png" id="1_nh1o0"]
+[ext_resource type="Script" uid="uid://con1smr82bjia" path="res://home/home.gd" id="1_stxqr"]
+[ext_resource type="Texture2D" uid="uid://blnac1lcg2i0s" path="res://assets/owl-px.png" id="2_03e8k"]
+[ext_resource type="Texture2D" uid="uid://b5ail75un2hv0" path="res://assets/brooklyn-sign-px.png" id="2_esb4i"]
+[ext_resource type="Texture2D" uid="uid://fj07qymk1k7m" path="res://assets/central-sign-px.png" id="3_khj4e"]
+[ext_resource type="Texture2D" uid="uid://c8oftst6qowv4" path="res://assets/snake-px.png" id="3_stxqr"]
+[ext_resource type="Texture2D" uid="uid://yp681lk7su51" path="res://assets/helmet-px.png" id="4_5l8su"]
+[ext_resource type="Texture2D" uid="uid://djefxdpmmtexf" path="res://assets/title-px.png" id="4_xo36c"]
+[ext_resource type="Texture2D" uid="uid://wlln3itkdbp5" path="res://assets/ts-px.png" id="5_1wbue"]
+[ext_resource type="Texture2D" uid="uid://b7pccbcglrq2f" path="res://assets/athena-px.png" id="5_ybqds"]
+[ext_resource type="Texture2D" uid="uid://dsi12jagmkhqb" path="res://assets/statue-px.png" id="6_03e8k"]
+[ext_resource type="Texture2D" uid="uid://du1wg24cn13m1" path="res://assets/olive-px.png" id="6_xmqgs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stxqr"]
+texture = ExtResource("1_nh1o0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y3sm1"]
+texture = ExtResource("2_03e8k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_38egu"]
+texture = ExtResource("3_stxqr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o43qk"]
+texture = ExtResource("4_5l8su")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wth1u"]
+texture = ExtResource("5_ybqds")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8q2i8"]
+texture = ExtResource("6_xmqgs")
+
+[node name="Home" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_stxqr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_stxqr")
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 305.0
+offset_right = 476.0
+offset_bottom = 345.0
+scale = Vector2(1.9540155, 1.16)
+theme_override_styles/panel = SubResource("StyleBoxTexture_y3sm1")
+
+[node name="Panel3" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 302.0
+offset_right = 547.0
+offset_bottom = 342.0
+scale = Vector2(1.835092, 1.2518257)
+theme_override_styles/panel = SubResource("StyleBoxTexture_38egu")
+
+[node name="Panel5" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 304.0
+offset_right = 681.0
+offset_bottom = 344.0
+scale = Vector2(2.24, 1.2000024)
+theme_override_styles/panel = SubResource("StyleBoxTexture_o43qk")
+
+[node name="Panel6" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 351.00003
+offset_top = 286.00003
+offset_right = 391.00003
+offset_bottom = 326.00003
+scale = Vector2(3.1369216, 1.7650095)
+theme_override_styles/panel = SubResource("StyleBoxTexture_wth1u")
+
+[node name="Panel4" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 290.00003
+offset_right = 604.0
+offset_bottom = 330.00003
+scale = Vector2(2.24, 1.5599976)
+theme_override_styles/panel = SubResource("StyleBoxTexture_8q2i8")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="Node2D"]
+offset_left = 5.0
+offset_top = 195.0
+offset_right = 1005.0
+offset_bottom = 457.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("2_esb4i")
+
+[node name="TextureButton2" type="TextureButton" parent="Node2D"]
+offset_left = 341.0
+offset_top = 386.0
+offset_right = 1341.0
+offset_bottom = 648.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_khj4e")
+
+[node name="TextureButton3" type="TextureButton" parent="Node2D"]
+offset_left = 15.0
+offset_top = 285.0
+offset_right = 1015.0
+offset_bottom = 547.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_xo36c")
+
+[node name="TextureButton4" type="TextureButton" parent="Node2D"]
+offset_left = 722.0
+offset_top = 577.0
+offset_right = 1722.0
+offset_bottom = 839.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_1wbue")
+
+[node name="TextureButton5" type="TextureButton" parent="Node2D"]
+offset_left = 607.0
+offset_top = 114.0
+offset_right = 1607.0
+offset_bottom = 376.0
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_03e8k")
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[connection signal="pressed" from="Node2D/TextureButton" to="." method="_on_brooklyn_pressed"]
+[connection signal="pressed" from="Node2D/TextureButton2" to="." method="_on_park_pressed"]
+[connection signal="pressed" from="Node2D/TextureButton4" to="." method="_on_ts_pressed"]
+[connection signal="pressed" from="Node2D/TextureButton5" to="." method="_on_liberty_pressed"]
