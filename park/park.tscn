@@ -2067,6 +2067,15 @@ offset_bottom = 1515.6238
 theme_override_font_sizes/font_size = 62
 text = "Collected Olives : 0/5"
 
+[node name="Label2" type="Label" parent="player"]
+offset_left = -1648.6238
+offset_top = -492.66058
+offset_right = -1256.9863
+offset_bottom = -443.66058
+scale = Vector2(2.6769705, 3.0976367)
+text = "press space to jump
+press left and right to move"
+
 [connection signal="body_entered" from="coins/coin" to="coins/coin" method="_on_body_entered"]
 [connection signal="body_entered" from="coins/coin" to="player" method="_on_coin_body_entered"]
 [connection signal="body_entered" from="coins/coin2" to="coins/coin2" method="_on_body_entered"]

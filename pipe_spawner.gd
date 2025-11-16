@@ -43,7 +43,7 @@ func _process(delta):
 
 			print("?JGKFNd")
 			# Win condition
-			if main_scene.score >= 2:
+			if main_scene.score >= 7:
 				get_tree().change_scene_to_file("res://end/end.tscn")
 
 	# Recycle pipes

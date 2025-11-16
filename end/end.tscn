@@ -1,17 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsdvt4mb333ls"]
+[gd_scene load_steps=3 format=3 uid="uid://dsdvt4mb333ls"]
 
 [ext_resource type="Script" uid="uid://clm57crb630lu" path="res://end/end.gd" id="1_clqyq"]
 [ext_resource type="Texture2D" uid="uid://drw8ix38goxiw" path="res://assets/end.png" id="2_7p2ky"]
-[ext_resource type="Texture2D" uid="uid://ceakhfqfly242" path="res://assets/bg.png" id="2_jueq2"]
 
 [node name="End" type="Node2D"]
 script = ExtResource("1_clqyq")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(568, 324.00003)
-scale = Vector2(0.429, 0.429)
-texture = ExtResource("2_jueq2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(186.99998, 457)
