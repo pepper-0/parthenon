@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://cug354cw0505v"]
+[gd_scene load_steps=24 format=4 uid="uid://cug354cw0505v"]
 
 [ext_resource type="Script" uid="uid://b1nsrw7h8ua4y" path="res://park/player.gd" id="1_dtfmk"]
 [ext_resource type="Texture2D" uid="uid://t01gr0t0yys5" path="res://assets/player/orpheus-right.png" id="2_4wmw7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dftctjn32asev" path="res://assets/Texture/TX Tileset Wall.png" id="7_f3ei7"]
 [ext_resource type="Script" uid="uid://wsplukdt12qd" path="res://park/coin.gd" id="8_63rd7"]
 [ext_resource type="Texture2D" uid="uid://du1wg24cn13m1" path="res://assets/olive-px.png" id="9_mc242"]
+[ext_resource type="Script" uid="uid://b7i64yt001clx" path="res://park/player_sprite.gd" id="10_mc242"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x63st"]
 texture = ExtResource("3_6ehep")
@@ -2048,6 +2049,7 @@ script = ExtResource("1_dtfmk")
 position = Vector2(95, 451)
 scale = Vector2(0.09, 0.09)
 texture = ExtResource("2_4wmw7")
+script = ExtResource("10_mc242")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
 position = Vector2(91, 469.70917)
@@ -2066,18 +2068,18 @@ limit_bottom = 1750
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 95.0
-offset_top = -463.0
-offset_right = 1331.0
-offset_bottom = -296.0
+offset_left = -445.0
+offset_top = -302.0
+offset_right = 791.0
+offset_bottom = -135.0
 theme_override_font_sizes/font_size = 62
 text = "Collected Olives : 0/5"
 
-[node name="Label2" type="Label" parent="player"]
-offset_left = -1648.6238
-offset_top = -492.66058
-offset_right = -1256.9863
-offset_bottom = -443.66058
+[node name="Label2" type="Label" parent="CanvasLayer"]
+offset_left = -457.99994
+offset_top = -503.00003
+offset_right = -66.36249
+offset_bottom = -454.00003
 scale = Vector2(2.6769705, 3.0976367)
 text = "press space to jump
 press left and right to move"
