@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const SPEED = 1000.0
+const JUMP_VELOCITY = -800.0
 
 var coin_counter = 0
 
@@ -43,4 +43,4 @@ func _on_coin_body_entered(body: Node2D) -> void:
 
 
 func _on_coin_5_body_entered(body: Node2D) -> void:
-	get_tree().change_scene_to_file("res://home/home.tscn")
+	get_tree().change_scene_to_file("res://end/end.tscn")
