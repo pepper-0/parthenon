@@ -2068,11 +2068,11 @@ limit_bottom = 1750
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
-offset_left = 30.999998
-offset_top = 96.0
-offset_right = 665.0
-offset_bottom = 182.0
-scale = Vector2(0.41445723, 0.38206577)
+offset_left = 28.0
+offset_top = 83.00001
+offset_right = 662.0
+offset_bottom = 169.0
+scale = Vector2(0.3444782, 0.31755587)
 theme_override_font_sizes/font_size = 62
 text = "Collected Olives : 0/5"
 
@@ -2081,7 +2081,7 @@ offset_left = 29.0
 offset_top = 35.0
 offset_right = 265.8349
 offset_bottom = 84.0
-scale = Vector2(1.1194102, 1.147322)
+scale = Vector2(0.9605861, 0.9845378)
 text = "press space to jump
 press left and right to move"
 
