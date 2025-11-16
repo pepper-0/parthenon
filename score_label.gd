@@ -1,8 +1,13 @@
 extends Label
 
-var score = 0
+var score: int = 0
+
+func add_point():
+	score += 1
+	update_score()
 
 func update_score():
 	text = str(score)
-	if score >= 20:
-		get_tree().change_scene("res://HomeScreen.tscn")
+	print("testteestse")
+	if score >= 2:
+		get_tree().change_scene("res://end/end.tscn")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cbg1timhvxd0h"]
+[gd_scene load_steps=7 format=3 uid="uid://cbg1timhvxd0h"]
 
 [ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="2_2tnc5"]
 [ext_resource type="Texture2D" uid="uid://0vi1issv7lma" path="res://assets/brooklyn-bridge.png" id="2_dg2d5"]
+[ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_2tnc5"]
 [ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="4_shnry"]
-[ext_resource type="Script" uid="uid://c0wvfgo3tyttm" path="res://score_label.gd" id="5_guco3"]
-[ext_resource type="Texture2D" uid="uid://cx1ro1dmak0ah" path="res://assets/bridge-pipe.png" id="6_00fmv"]
 
 [sub_resource type="GDScript" id="GDScript_bi23f"]
 script/source = "extends Node2D
@@ -21,87 +20,6 @@ var score = 0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
 size = Vector2(85.75, 105)
-
-[sub_resource type="GDScript" id="GDScript_guco3"]
-script/source = "extends Node2D
-
-@export var pipe_texture: Texture2D
-@export var spacing: float = 300
-@export var scroll_speed: float = 200
-@export var max_pipes: int = 100
-@export var gap_size: float = 200
-@export var vertical_range: float = 150
-
-var pipe_count: int = 0
-var active_pipes: Array = []
-var main_scene: Node = null
-
-var pipe_scene = preload(\"res://pipe.tscn\")
-
-
-func _ready():
-	main_scene = get_parent()
-	for i in range(3):
-		spawn_pipe()
-
-func _process(delta):
-	# Move pipes left
-	for pipe in active_pipes:
-		pipe.position.x -= scroll_speed * delta
-
-	# Update score
-	var player_x = main_scene.get_node(\"CharacterBody2D\").position.x
-	for i in range(0, active_pipes.size(), 2):
-		var top_pipe = active_pipes[i]
-		if not top_pipe.get_meta(\"scored\") and top_pipe.position.x + pipe_texture.get_width() < player_x:
-			top_pipe.set_meta(\"scored\", true)
-			main_scene.score += 1
-			main_scene.get_node(\"ScoreLabel\").text = str(main_scene.score)
-
-	# Recycle pipes
-	recycle_pipes()
-
-func spawn_pipe():
-	if pipe_count >= max_pipes:
-		return
-
-	var top_pipe = pipe_scene.instantiate()
-	top_pipe.level = \"brooklyn\"
-	var bottom_pipe = pipe_scene.instantiate()
-	top_pipe.level = \"brooklyn\"
-
-	top_pipe.scale.y = -1
-	add_child(top_pipe)
-	add_child(bottom_pipe)
-
-	top_pipe.set_meta(\"scored\", false)
-
-	var y_offset = randf_range(-vertical_range, vertical_range)
-	var viewport_width = get_viewport_rect().size.x
-	var spawn_x = viewport_width + pipe_count * spacing
-	var gap_center_y = get_viewport_rect().size.y / 2 + y_offset
-
-	top_pipe.position = Vector2(spawn_x, gap_center_y - gap_size / 2 - pipe_texture.get_height())
-	bottom_pipe.position = Vector2(spawn_x, gap_center_y + gap_size / 2)
-
-	active_pipes.append(top_pipe)
-	active_pipes.append(bottom_pipe)
-
-	pipe_count += 1
-
-func recycle_pipes():
-	while active_pipes.size() >= 2:
-		var top = active_pipes[0]
-		var bottom = active_pipes[1]
-		if top.position.x < -pipe_texture.get_width():
-			active_pipes.pop_front()
-			active_pipes.pop_front()
-			top.queue_free()
-			bottom.queue_free()
-			spawn_pipe()
-		else:
-			break
-"
 
 [node name="BrooklynBridge" type="Node2D"]
 script = SubResource("GDScript_bi23f")
@@ -124,8 +42,7 @@ position = Vector2(62.125, 61.5)
 shape = SubResource("RectangleShape2D_8810n")
 
 [node name="PipeSpawner" type="Node2D" parent="."]
-script = SubResource("GDScript_guco3")
-pipe_texture = ExtResource("6_00fmv")
+script = ExtResource("4_2tnc5")
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 530.0
@@ -134,4 +51,3 @@ offset_right = 650.0
 offset_bottom = 91.0
 theme_override_font_sizes/font_size = 38
 text = "SCORE"
-script = ExtResource("5_guco3")

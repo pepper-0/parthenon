@@ -1,12 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cte2eg8s4tuta"]
+[gd_scene load_steps=7 format=3 uid="uid://cte2eg8s4tuta"]
 
 [ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="1_37ok4"]
 [ext_resource type="Script" uid="uid://dhp0ul81dgug6" path="res://statue_of_liberty.gd" id="1_moun6"]
-[ext_resource type="Texture2D" uid="uid://ppolvlg7kk5f" path="res://assets/pipe.png" id="2_651mk"]
 [ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_de8ca"]
 [ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="3_de8ca"]
 [ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_753v3"]
-[ext_resource type="Script" uid="uid://c0wvfgo3tyttm" path="res://score_label.gd" id="5_moun6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
 size = Vector2(81, 88)
@@ -33,7 +31,11 @@ shape = SubResource("RectangleShape2D_8810n")
 
 [node name="PipeSpawner" type="Node2D" parent="."]
 script = ExtResource("4_753v3")
-pipe_texture = ExtResource("2_651mk")
+spacing = null
+scroll_speed = null
+max_pipes = null
+gap_size = null
+vertical_range = null
 
 [node name="ScoreLabel" type="Label" parent="."]
 offset_left = 519.0
@@ -42,4 +44,3 @@ offset_right = 630.0
 offset_bottom = 94.0
 theme_override_font_sizes/font_size = 35
 text = "SCORE"
-script = ExtResource("5_moun6")
