@@ -1,5 +1,5 @@
 # Parthenon
-- play [here](https://google.com)
+### Play [here](https://mayalh22.itch.io/parthenon-game)
 
 ### *About*
 Parthenon is a platformer adventure game where the player helps Athena recover her missing artifacts in a Greek-mythology inspired version of NYC!
