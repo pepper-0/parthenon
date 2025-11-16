@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cte2eg8s4tuta"]
 
-[ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="1_37ok4"]
-[ext_resource type="Script" uid="uid://dhp0ul81dgug6" path="res://statue_of_liberty.gd" id="1_moun6"]
+[ext_resource type="Script" path="res://statue_of_liberty.gd" id="1_moun6"]
 [ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_de8ca"]
-[ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="3_de8ca"]
+[ext_resource type="Script" path="res://flappy_character.gd" id="3_de8ca"]
 [ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_753v3"]
+[ext_resource type="Texture2D" uid="uid://t01gr0t0yys5" path="res://assets/player/orpheus-right.png" id="4_moun6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
 size = Vector2(81, 88)
@@ -23,7 +23,7 @@ script = ExtResource("3_de8ca")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(49, 51)
 scale = Vector2(0.04484954, 0.052734327)
-texture = ExtResource("1_37ok4")
+texture = ExtResource("4_moun6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(49.5, 48)

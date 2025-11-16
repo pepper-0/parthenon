@@ -1,9 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cbg1timhvxd0h"]
+[gd_scene load_steps=7 format=3 uid="uid://byojrs3t2ccu4"]
 
-[ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="2_2tnc5"]
+[ext_resource type="Script" path="res://flappy_character.gd" id="2_2tnc5"]
 [ext_resource type="Texture2D" uid="uid://0vi1issv7lma" path="res://assets/brooklyn-bridge.png" id="2_dg2d5"]
+[ext_resource type="Texture2D" uid="uid://t01gr0t0yys5" path="res://assets/player/orpheus-right.png" id="3_2tnc5"]
 [ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_2tnc5"]
-[ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="4_shnry"]
 
 [sub_resource type="GDScript" id="GDScript_bi23f"]
 script/source = "extends Node2D
@@ -35,7 +35,7 @@ script = ExtResource("2_2tnc5")
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
 position = Vector2(60.984375, 64.390625)
 scale = Vector2(0.049786597, 0.06476509)
-texture = ExtResource("4_shnry")
+texture = ExtResource("3_2tnc5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(62.125, 61.5)
