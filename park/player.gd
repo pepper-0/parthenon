@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -800.0
 
 var coin_counter = 0
 
-@onready var coin_label = %Label
+@onready var coin_label = $"../../CanvasLayer/Label"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.

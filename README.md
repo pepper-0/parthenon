@@ -25,7 +25,6 @@ This project was created during Parthenon, the 36-hour capstone hackathon of Hac
 - Pixilart, Photopea, and Canva to create our original assets
 - Orpheus art from Hack Club for our player sprite
 - (Itch.io assets)[https://cainos.itch.io/pixel-art-top-down-basic] for the Central Park tileset
-- (Hand-pixelated art)[https://www.reddit.com/r/PixelArt/comments/119o1wo/little_man/] from r/PixelArt for the Times Square seller
 - (Music)[https://uppbeat.io/t/kevin-macleod/deliberate-thought] by Kevin MacLeod
 
 Other resources and tools used:
