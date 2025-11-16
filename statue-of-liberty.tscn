@@ -1,36 +1,43 @@
-[gd_scene load_steps=8 format=3 uid="uid://cte2eg8s4tuta"]
+[gd_scene load_steps=7 format=3 uid="uid://cte2eg8s4tuta"]
 
 [ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="1_37ok4"]
 [ext_resource type="Script" uid="uid://dhp0ul81dgug6" path="res://statue_of_liberty.gd" id="1_moun6"]
-[ext_resource type="Texture2D" uid="uid://ppolvlg7kk5f" path="res://assets/pipe.png" id="2_651mk"]
 [ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_de8ca"]
 [ext_resource type="Script" uid="uid://dtx07kfnrm4e7" path="res://character_body_2d.gd" id="3_glkpk"]
 [ext_resource type="Script" uid="uid://cg8wuuewa5beo" path="res://PipeSpawner.gd" id="5_nuvyb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
+size = Vector2(110, 111)
 
 [node name="StatueOfLiberty" type="Node2D"]
 script = ExtResource("1_moun6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(768, 324)
+position = Vector2(586.99994, 314.99994)
+scale = Vector2(7.7866664, 3.2199996)
 texture = ExtResource("2_de8ca")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(153, 317)
 script = ExtResource("3_glkpk")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-28.719982, -7.500017)
+scale = Vector2(0.052916657, 0.07421875)
 texture = ExtResource("1_37ok4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-33, -18.5)
 shape = SubResource("RectangleShape2D_8810n")
 
 [node name="PipeSpawner" type="Node2D" parent="."]
 script = ExtResource("5_nuvyb")
-pipe_texture = ExtResource("2_651mk")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 576.0
-offset_top = 50.0
-offset_right = 616.0
-offset_bottom = 73.0
+offset_left = 528.0
+offset_top = 11.0
+offset_right = 723.0
+offset_bottom = 60.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 35
+text = "SCORE"

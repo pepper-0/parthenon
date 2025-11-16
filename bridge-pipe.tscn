@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbk1qnvq8tt1i"]
+
+[ext_resource type="Texture2D" uid="uid://cx1ro1dmak0ah" path="res://assets/bridge-pipe.png" id="1_nkecp"]
+
+[sub_resource type="GDScript" id="GDScript_nkecp"]
+script/source = "extends Area2D
+
+func _ready():
+	connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
+
+func _on_body_entered(body):
+	if body is CharacterBody2D:
+		body._on_pipe_collision()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y58r5"]
+size = Vector2(20, 248)
+
+[node name="Area2D" type="Area2D" groups=["pipe_hitboxes"]]
+script = SubResource("GDScript_nkecp")
+
+[node name="BridgePipe" type="Sprite2D" parent="."]
+position = Vector2(0, 81.5)
+scale = Vector2(1, 1.5976561)
+texture = ExtResource("1_nkecp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_y58r5")

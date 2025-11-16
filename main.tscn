@@ -12,3 +12,7 @@ scale = Vector2(0.5979167, 0.59444445)
 texture = ExtResource("2_0xm2m")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

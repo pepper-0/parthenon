@@ -8,3 +8,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = jump_force
 	move_and_slide()
+
+func _on_pipe_collision():
+	get_tree().change_scene_to_file("res://home/home.tscn")
