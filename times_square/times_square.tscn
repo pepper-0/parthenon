@@ -1,19 +1,17 @@
-[gd_scene load_steps=17 format=4 uid="uid://rsohf3cy5hnq"]
+[gd_scene load_steps=19 format=4 uid="uid://rsohf3cy5hnq"]
 
 [ext_resource type="Texture2D" uid="uid://bvqcagqaefvjv" path="res://assets/times-square-background.png" id="1_pnfr7"]
 [ext_resource type="Script" uid="uid://28hy82e8nm0m" path="res://times_square/player.gd" id="2_3basi"]
 [ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="3_oaqk2"]
 [ext_resource type="Script" uid="uid://cl8fgg0a4f461" path="res://times_square/player_sprite.gd" id="4_1q3w4"]
 [ext_resource type="Script" uid="uid://7pphkcjmuv8w" path="res://times_square/player_camera.gd" id="5_5xyuf"]
+[ext_resource type="Script" uid="uid://cse8v6rogq7p2" path="res://times_square/seller.gd" id="5_bafaa"]
 [ext_resource type="Texture2D" uid="uid://bkyyupmq4vrij" path="res://assets/tileset.png" id="6_bafaa"]
 [ext_resource type="PackedScene" uid="uid://5eujc56dyy8u" path="res://collectibles/coin.tscn" id="7_0ege0"]
 [ext_resource type="PackedScene" uid="uid://b4qhq45n04ac2" path="res://collectibles/helmet.tscn" id="7_5xyuf"]
 [ext_resource type="Texture2D" uid="uid://d0lunigrajhih" path="res://assets/man.png" id="9_bafaa"]
-[ext_resource type="Script" uid="uid://bm7hrckoqjl3m" path="res://times_square/dialogue.gd" id="10_0ege0"]
+[ext_resource type="Script" path="res://times_square/dialogue.gd" id="10_0ege0"]
 [ext_resource type="Texture2D" uid="uid://fjmrvkqeksvh" path="res://assets/dialogue.png" id="11_1hgi7"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpn33"]
-size = Vector2(53, 48)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pdiel"]
 texture = ExtResource("6_bafaa")
@@ -109,33 +107,18 @@ tile_size = Vector2i(12, 12)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8met1")
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bafaa"]
+radius = 30.066593
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fpn33"]
+size = Vector2(53, 48)
+
 [node name="TimesSquare" type="Node"]
 
 [node name="TimesSquareBackground" type="Sprite2D" parent="."]
-position = Vector2(837, 248.99998)
-scale = Vector2(1.6430095, 1.6430095)
+position = Vector2(808, 193)
+scale = Vector2(2.125924, 2.125924)
 texture = ExtResource("1_pnfr7")
-
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(37, 521)
-script = ExtResource("2_3basi")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(0, -7.6293945e-06)
-scale = Vector2(0.032883152, 0.03207122)
-texture = ExtResource("3_oaqk2")
-script = ExtResource("4_1q3w4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2(0, -4)
-shape = SubResource("RectangleShape2D_fpn33")
-
-[node name="Camera2D" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
-position = Vector2(0, -133)
-scale = Vector2(-0.24400881, -0.24099787)
-position_smoothing_enabled = true
-script = ExtResource("5_5xyuf")
-tilemap = NodePath("../../GroundMapLayer")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(1, 0)
@@ -191,12 +174,23 @@ position = Vector2(1349, 238)
 scale = Vector2(1.7386035, 1.7386035)
 value = 1
 
+[node name="Coin10" parent="." instance=ExtResource("7_0ege0")]
+position = Vector2(1674, 593)
+scale = Vector2(1.7386035, 1.7386035)
+value = 1
+
 [node name="GroundMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAApABEAAAAEAAAAAAAoABEAAAAEAAAAAAAnABEAAAAEAAAAAAAmABEAAAAEAAAAAAAlABEAAAAEAAAAAAAkABEAAAAEAAAAAAAjABEAAAAEAAAAAAAiABEAAAAEAAAAAAAhABEAAAAEAAAAAAAgABEAAAAEAAAAAAAfABEAAAAEAAAAAAAeABEAAAAEAAAAAAAdABEAAAAEAAAAAAAcABEAAAAEAAAAAAAbABEAAAAEAAAAAAAaABEAAAAEAAAAAAAZABEAAAAEAAAAAAAYABEAAAAEAAAAAAAXABEAAAAEAAAAAAAWABEAAAAEAAAAAAAVABEAAAAEAAAAAAAUABEAAAAEAAAAAAATABEAAAAEAAAAAAASABEAAAAEAAAAAAARABEAAAAEAAAAAAAQABEAAAAEAAAAAAAPABEAAAAEAAAAAAAOABEAAAAEAAAAAAANABEAAAAEAAAAAAAMABEAAAAEAAAAAAALABEAAAAEAAAAAAAKABEAAAAEAAAAAAAJABEAAAAEAAAAAAAIABEAAAAEAAAAAAAHABEAAAAEAAAAAAAGABEAAAAEAAAAAAAFABEAAAAEAAAAAAAEABEAAAAEAAAAAAADABEAAAAEAAAAAAACABEAAAAEAAAAAAABABEAAAAEAAAAAAAAABEAAAAEAAAAAAD//xEAAAAEAAAAAAAqABEAAAAEAAAAAAArABEAAAAEAAAAAAAuABEAAAAEAAAAAAAtABEAAAAEAAAAAAAsABEAAAAEAAAAAAA=")
 tile_set = SubResource("TileSet_i8dog")
 
-[node name="Seller" type="Node2D" parent="."]
+[node name="Seller" type="Area2D" parent="."]
+top_level = true
+script = ExtResource("5_bafaa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Seller"]
+position = Vector2(824, 551)
+shape = SubResource("CircleShape2D_bafaa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Seller"]
 position = Vector2(824, 561)
@@ -204,9 +198,42 @@ scale = Vector2(0.19216758, 0.19635426)
 texture = ExtResource("9_bafaa")
 
 [node name="Dialogue" type="Node2D" parent="Seller"]
+visible = false
+top_level = true
 script = ExtResource("10_0ege0")
 
 [node name="Sprite2D" type="Sprite2D" parent="Seller/Dialogue"]
 position = Vector2(725.00006, 453)
 scale = Vector2(1.3599998, 1.3599998)
 texture = ExtResource("11_1hgi7")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(37, 521)
+script = ExtResource("2_3basi")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(0, -7.6293945e-06)
+scale = Vector2(0.032883152, 0.03207122)
+texture = ExtResource("3_oaqk2")
+script = ExtResource("4_1q3w4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_fpn33")
+
+[node name="Camera2D" type="Camera2D" parent="Player" node_paths=PackedStringArray("tilemap")]
+position = Vector2(0, -133)
+scale = Vector2(-0.24400881, -0.24099787)
+limit_left = 0
+limit_top = -400
+limit_right = 1692
+limit_bottom = 648
+position_smoothing_enabled = true
+script = ExtResource("5_5xyuf")
+tilemap = NodePath("../../GroundMapLayer")
+
+[node name="Label" type="Label" parent="Player"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="Seller" to="Seller" method="_on_seller_body_entered"]
