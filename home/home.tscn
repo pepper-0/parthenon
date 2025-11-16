@@ -36,8 +36,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.9999995
+offset_top = -16.999998
+offset_right = 5.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00836, 1.047864)
 script = ExtResource("1_stxqr")
 
 [node name="Panel" type="Panel" parent="."]
@@ -97,43 +102,43 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_8q2i8")
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="TextureButton" type="TextureButton" parent="Node2D"]
-offset_left = 5.0
-offset_top = 195.0
-offset_right = 1005.0
-offset_bottom = 457.0
-scale = Vector2(0.25, 0.25)
+offset_left = 17.0
+offset_top = 202.0
+offset_right = 1017.0
+offset_bottom = 464.0
+scale = Vector2(0.22571543, 0.15265824)
 texture_normal = ExtResource("2_esb4i")
 
 [node name="TextureButton2" type="TextureButton" parent="Node2D"]
-offset_left = 341.0
-offset_top = 386.0
-offset_right = 1341.0
-offset_bottom = 648.0
-scale = Vector2(0.25, 0.25)
+offset_left = 347.0
+offset_top = 408.0
+offset_right = 1347.0
+offset_bottom = 670.0
+scale = Vector2(0.21348196, 0.14786783)
 texture_normal = ExtResource("3_khj4e")
 
 [node name="TextureButton3" type="TextureButton" parent="Node2D"]
-offset_left = 15.0
-offset_top = 285.0
-offset_right = 1015.0
-offset_bottom = 547.0
-scale = Vector2(0.3, 0.3)
+offset_left = 24.0
+offset_top = 294.0
+offset_right = 1024.0
+offset_bottom = 556.0
+scale = Vector2(0.2873149, 0.23638412)
 texture_normal = ExtResource("4_xo36c")
 
 [node name="TextureButton4" type="TextureButton" parent="Node2D"]
-offset_left = 722.0
-offset_top = 577.0
-offset_right = 1722.0
-offset_bottom = 839.0
-scale = Vector2(0.25, 0.25)
+offset_left = 740.0
+offset_top = 594.0
+offset_right = 1740.0
+offset_bottom = 856.0
+scale = Vector2(0.22126968, 0.15136316)
 texture_normal = ExtResource("5_1wbue")
 
 [node name="TextureButton5" type="TextureButton" parent="Node2D"]
-offset_left = 607.0
-offset_top = 114.0
-offset_right = 1607.0
-offset_bottom = 376.0
-scale = Vector2(0.25, 0.25)
+offset_left = 618.0
+offset_top = 126.0
+offset_right = 1618.0
+offset_bottom = 388.0
+scale = Vector2(0.22084768, 0.15735054)
 texture_normal = ExtResource("6_03e8k")
 
 [node name="Node2D2" type="Node2D" parent="."]
