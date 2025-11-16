@@ -1,54 +1,52 @@
-[gd_scene load_steps=7 format=3 uid="uid://cte2eg8s4tuta"]
+[gd_scene load_steps=8 format=3 uid="uid://e8s84ighvmk1"]
 
-[ext_resource type="Script" path="res://statue_of_liberty.gd" id="1_moun6"]
-[ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_de8ca"]
-<<<<<<< HEAD
-[ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="3_de8ca"]
-[ext_resource type="Script" uid="uid://s45v2ixjas5n" path="res://liberty_pipe_spawner.gd" id="5_753v3"]
-=======
-[ext_resource type="Script" path="res://flappy_character.gd" id="3_de8ca"]
-[ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_753v3"]
-[ext_resource type="Texture2D" uid="uid://t01gr0t0yys5" path="res://assets/player/orpheus-right.png" id="4_moun6"]
->>>>>>> 48e1cdd2a0447dd874a842f800e35660bd4697f2
+[ext_resource type="Script" uid="uid://dhp0ul81dgug6" path="res://statue_of_liberty.gd" id="1_753v3"]
+[ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_moun6"]
+[ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="3_de8ca"]
+[ext_resource type="Script" uid="uid://dtx07kfnrm4e7" path="res://character_body_2d.gd" id="3_moun6"]
+[ext_resource type="Script" uid="uid://s45v2ixjas5n" path="res://liberty_pipe_spawner.gd" id="4_glkpk"]
+[ext_resource type="Texture2D" uid="uid://ppolvlg7kk5f" path="res://assets/pipe.png" id="5_nuvyb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
-size = Vector2(81, 88)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fei2"]
+size = Vector2(111, 121)
 
 [node name="StatueOfLiberty" type="Node2D"]
-script = ExtResource("1_moun6")
+script = ExtResource("1_753v3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577, 323.50003)
-scale = Vector2(7.706667, 3.2350001)
-texture = ExtResource("2_de8ca")
+position = Vector2(582, 334)
+scale = Vector2(7.693333, 3.32)
+texture = ExtResource("2_moun6")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
-script = ExtResource("3_de8ca")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("3_moun6")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(49, 51)
-scale = Vector2(0.04484954, 0.052734327)
-texture = ExtResource("4_moun6")
+position = Vector2(62, 68.00001)
+scale = Vector2(0.060185183, 0.07595487)
+texture = ExtResource("3_de8ca")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(49.5, 48)
-shape = SubResource("RectangleShape2D_8810n")
+position = Vector2(61.5, 62.5)
+shape = SubResource("RectangleShape2D_7fei2")
 
-[node name="PipeSpawner" type="Node2D" parent="."]
-script = ExtResource("5_753v3")
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(27, 16)
+script = ExtResource("4_glkpk")
+pipe_texture = ExtResource("5_nuvyb")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 519.0
-offset_top = 45.0
-offset_right = 630.0
-offset_bottom = 94.0
-theme_override_font_sizes/font_size = 35
+offset_left = 530.0
+offset_top = 38.0
+offset_right = 650.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 38
 text = "SCORE"
 
 [node name="Label" type="Label" parent="."]
-offset_left = 11.000008
-offset_top = 5.0
-offset_right = 166.0
-offset_bottom = 28.0
-scale = Vector2(1.407672, 1.7291031)
+offset_left = 26.999996
+offset_top = 9.0
+offset_right = 182.0
+offset_bottom = 32.0
+scale = Vector2(1.407672, 1.7258383)
 text = "press space to jump"
