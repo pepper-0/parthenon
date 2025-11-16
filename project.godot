@@ -38,6 +38,11 @@ project/assembly_name="parthenon"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
+[autoload]
+
+GC="*res://times_square/game_controller.gd"
+EC="*res://times_square/event_controller.gd"
+
 [input]
 
 right={
