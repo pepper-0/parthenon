@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3wuu26ax0ri0"
-path="res://.godot/imported/intro-4.png-75637965b0a9d9583ae93eb2865097d8.ctex"
+uid="uid://t01gr0t0yys5"
+path="res://.godot/imported/orpheus-right.png-e9dfe1ca4dcb8a860e71dcb3721184a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/intro-4.png"
-dest_files=["res://.godot/imported/intro-4.png-75637965b0a9d9583ae93eb2865097d8.ctex"]
+source_file="res://assets/player/orpheus-right.png"
+dest_files=["res://.godot/imported/orpheus-right.png-e9dfe1ca4dcb8a860e71dcb3721184a0.ctex"]
 
 [params]
 
