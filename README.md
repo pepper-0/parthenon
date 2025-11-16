@@ -3,7 +3,7 @@
 parthenon is a platformer adventure game where the player helps Athena recover her missing artifacts in a Greek-mythology inspired version of NYC
 
 you play as Orpheus, navigating platforming challenges. Athena provides hints throughout the game
-the goal is to collect four artifacts, each representing progress (an owl, a helmet, a snake, and an olive branch)
+as you collect four artifacts, each representing progress (an owl, a helmet, a snake, and an olive branch)
 
 each level is based on a real NYC location and has unique objectives:
 
