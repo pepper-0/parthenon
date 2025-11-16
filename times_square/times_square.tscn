@@ -232,8 +232,12 @@ position_smoothing_enabled = true
 script = ExtResource("5_5xyuf")
 tilemap = NodePath("../../GroundMapLayer")
 
-[node name="Label" type="Label" parent="Player"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 43.0
 
 [connection signal="body_entered" from="Seller" to="Seller" method="_on_seller_body_entered"]

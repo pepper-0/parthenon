@@ -5,7 +5,7 @@ const JUMP_VELOCITY = -500.0
 
 var coin_counter = 0
 
-@onready var coin_label = $Label
+@onready var coin_label = $"../CanvasLayer/Label"
 
 func _ready():
 	print("Coin label:", coin_label)
