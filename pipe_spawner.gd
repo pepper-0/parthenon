@@ -4,12 +4,15 @@ extends Node2D
 @export var spacing: float = 300
 @export var scroll_speed: float = 200
 @export var max_pipes: int = 100
-@export var gap_size: float = 200
+@export var gap_size: float = 400
 @export var vertical_range: float = 150
 
 var pipe_count: int = 0
 var active_pipes: Array = []
 var main_scene: Node = null
+
+var pipe_scene = preload("res://pipe.tscn")
+
 
 func _ready():
 	main_scene = get_parent()
@@ -37,10 +40,11 @@ func spawn_pipe():
 	if pipe_count >= max_pipes:
 		return
 
-	var top_pipe = Sprite2D.new()
-	var bottom_pipe = Sprite2D.new()
-	top_pipe.texture = pipe_texture
-	bottom_pipe.texture = pipe_texture
+	var top_pipe = pipe_scene.instantiate()
+	top_pipe.level = "brooklyn"
+	var bottom_pipe = pipe_scene.instantiate()
+	top_pipe.level = "brooklyn"
+
 	top_pipe.scale.y = -1
 	add_child(top_pipe)
 	add_child(bottom_pipe)

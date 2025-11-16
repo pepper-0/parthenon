@@ -1,36 +1,45 @@
-[gd_scene load_steps=8 format=3 uid="uid://cte2eg8s4tuta"]
+[gd_scene load_steps=9 format=3 uid="uid://cte2eg8s4tuta"]
 
 [ext_resource type="Texture2D" uid="uid://1e8e4pnkm026" path="res://assets/player/orpheus-left.png" id="1_37ok4"]
 [ext_resource type="Script" uid="uid://dhp0ul81dgug6" path="res://statue_of_liberty.gd" id="1_moun6"]
 [ext_resource type="Texture2D" uid="uid://ppolvlg7kk5f" path="res://assets/pipe.png" id="2_651mk"]
 [ext_resource type="Texture2D" uid="uid://djrgjwxx86d4u" path="res://assets/background.png" id="2_de8ca"]
-[ext_resource type="Script" uid="uid://dtx07kfnrm4e7" path="res://character_body_2d.gd" id="3_glkpk"]
-[ext_resource type="Script" uid="uid://cg8wuuewa5beo" path="res://PipeSpawner.gd" id="5_nuvyb"]
+[ext_resource type="Script" uid="uid://r752mdhy5wsy" path="res://flappy_character.gd" id="3_de8ca"]
+[ext_resource type="Script" uid="uid://2x8qg8y488jp" path="res://pipe_spawner.gd" id="4_753v3"]
+[ext_resource type="Script" uid="uid://c0wvfgo3tyttm" path="res://score_label.gd" id="5_moun6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8810n"]
+size = Vector2(81, 88)
 
 [node name="StatueOfLiberty" type="Node2D"]
 script = ExtResource("1_moun6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(768, 324)
+position = Vector2(577, 323.50003)
+scale = Vector2(7.706667, 3.2350001)
 texture = ExtResource("2_de8ca")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("3_glkpk")
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["player"]]
+script = ExtResource("3_de8ca")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(49, 51)
+scale = Vector2(0.04484954, 0.052734327)
 texture = ExtResource("1_37ok4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(49.5, 48)
 shape = SubResource("RectangleShape2D_8810n")
 
 [node name="PipeSpawner" type="Node2D" parent="."]
-script = ExtResource("5_nuvyb")
+script = ExtResource("4_753v3")
 pipe_texture = ExtResource("2_651mk")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_left = 576.0
-offset_top = 50.0
-offset_right = 616.0
-offset_bottom = 73.0
+offset_left = 519.0
+offset_top = 45.0
+offset_right = 630.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 35
+text = "SCORE"
+script = ExtResource("5_moun6")
